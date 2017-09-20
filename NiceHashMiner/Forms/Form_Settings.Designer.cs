@@ -1,5 +1,7 @@
-﻿namespace NiceHashMiner.Forms {
-    partial class Form_Settings {
+﻿namespace NiceHashMiner.Forms
+{
+    partial class Form_Settings
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,6 +30,8 @@
             this.tabControlGeneral = new System.Windows.Forms.TabControl();
             this.tabPageGeneral = new System.Windows.Forms.TabPage();
             this.groupBox_Misc = new System.Windows.Forms.GroupBox();
+            this.pictureBox_ShowInternetConnectionWarning = new System.Windows.Forms.PictureBox();
+            this.checkBox_ShowInternetConnectionWarning = new System.Windows.Forms.CheckBox();
             this.checkBox_MinimizeMiningWindows = new System.Windows.Forms.CheckBox();
             this.pictureBox_MinimizeMiningWindows = new System.Windows.Forms.PictureBox();
             this.pictureBox_RunAtStartup = new System.Windows.Forms.PictureBox();
@@ -69,6 +73,10 @@
             this.pictureBox_LogToFile = new System.Windows.Forms.PictureBox();
             this.checkBox_DebugConsole = new System.Windows.Forms.CheckBox();
             this.groupBox_Main = new System.Windows.Forms.GroupBox();
+            this.label_IFTTTAPIKey = new System.Windows.Forms.Label();
+            this.textBox_IFTTTKey = new System.Windows.Forms.TextBox();
+            this.pictureBox_UseIFTTT = new System.Windows.Forms.PictureBox();
+            this.checkBox_UseIFTTT = new System.Windows.Forms.CheckBox();
             this.checkBox_IdleWhenNoInternetAccess = new System.Windows.Forms.CheckBox();
             this.pictureBox_WorkerName = new System.Windows.Forms.PictureBox();
             this.pictureBox_MinProfit = new System.Windows.Forms.PictureBox();
@@ -143,6 +151,7 @@
             this.tabControlGeneral.SuspendLayout();
             this.tabPageGeneral.SuspendLayout();
             this.groupBox_Misc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ShowInternetConnectionWarning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MinimizeMiningWindows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RunAtStartup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_AllowMultipleInstances)).BeginInit();
@@ -164,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LogMaxFileSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LogToFile)).BeginInit();
             this.groupBox_Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UseIFTTT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WorkerName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MinProfit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ServiceLocation)).BeginInit();
@@ -205,7 +215,7 @@
             this.tabControlGeneral.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabControlGeneral.Name = "tabControlGeneral";
             this.tabControlGeneral.SelectedIndex = 0;
-            this.tabControlGeneral.Size = new System.Drawing.Size(612, 396);
+            this.tabControlGeneral.Size = new System.Drawing.Size(612, 417);
             this.tabControlGeneral.TabIndex = 0;
             this.tabControlGeneral.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlGeneral_Selected);
             // 
@@ -219,13 +229,15 @@
             this.tabPageGeneral.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPageGeneral.Name = "tabPageGeneral";
             this.tabPageGeneral.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPageGeneral.Size = new System.Drawing.Size(604, 370);
+            this.tabPageGeneral.Size = new System.Drawing.Size(604, 391);
             this.tabPageGeneral.TabIndex = 0;
             this.tabPageGeneral.Text = "General";
             this.tabPageGeneral.UseVisualStyleBackColor = true;
             // 
             // groupBox_Misc
             // 
+            this.groupBox_Misc.Controls.Add(this.pictureBox_ShowInternetConnectionWarning);
+            this.groupBox_Misc.Controls.Add(this.checkBox_ShowInternetConnectionWarning);
             this.groupBox_Misc.Controls.Add(this.checkBox_MinimizeMiningWindows);
             this.groupBox_Misc.Controls.Add(this.pictureBox_MinimizeMiningWindows);
             this.groupBox_Misc.Controls.Add(this.pictureBox_RunAtStartup);
@@ -262,10 +274,32 @@
             this.groupBox_Misc.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox_Misc.Name = "groupBox_Misc";
             this.groupBox_Misc.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox_Misc.Size = new System.Drawing.Size(244, 361);
+            this.groupBox_Misc.Size = new System.Drawing.Size(244, 383);
             this.groupBox_Misc.TabIndex = 391;
             this.groupBox_Misc.TabStop = false;
             this.groupBox_Misc.Text = "Misc:";
+            // 
+            // pictureBox_ShowInternetConnectionWarning
+            // 
+            this.pictureBox_ShowInternetConnectionWarning.Image = global::NiceHashMiner.Properties.Resources.info_black_18;
+            this.pictureBox_ShowInternetConnectionWarning.Location = new System.Drawing.Point(222, 361);
+            this.pictureBox_ShowInternetConnectionWarning.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox_ShowInternetConnectionWarning.Name = "pictureBox_ShowInternetConnectionWarning";
+            this.pictureBox_ShowInternetConnectionWarning.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox_ShowInternetConnectionWarning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_ShowInternetConnectionWarning.TabIndex = 371;
+            this.pictureBox_ShowInternetConnectionWarning.TabStop = false;
+            // 
+            // checkBox_ShowInternetConnectionWarning
+            // 
+            this.checkBox_ShowInternetConnectionWarning.AutoSize = true;
+            this.checkBox_ShowInternetConnectionWarning.Location = new System.Drawing.Point(6, 361);
+            this.checkBox_ShowInternetConnectionWarning.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.checkBox_ShowInternetConnectionWarning.Name = "checkBox_ShowInternetConnectionWarning";
+            this.checkBox_ShowInternetConnectionWarning.Size = new System.Drawing.Size(192, 17);
+            this.checkBox_ShowInternetConnectionWarning.TabIndex = 370;
+            this.checkBox_ShowInternetConnectionWarning.Text = "Show Internet Connection Warning";
+            this.checkBox_ShowInternetConnectionWarning.UseVisualStyleBackColor = true;
             // 
             // checkBox_MinimizeMiningWindows
             // 
@@ -633,7 +667,7 @@
             this.groupBox_Logging.Controls.Add(this.pictureBox_LogMaxFileSize);
             this.groupBox_Logging.Controls.Add(this.pictureBox_LogToFile);
             this.groupBox_Logging.Controls.Add(this.checkBox_DebugConsole);
-            this.groupBox_Logging.Location = new System.Drawing.Point(6, 268);
+            this.groupBox_Logging.Location = new System.Drawing.Point(6, 297);
             this.groupBox_Logging.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox_Logging.Name = "groupBox_Logging";
             this.groupBox_Logging.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -717,6 +751,10 @@
             // 
             // groupBox_Main
             // 
+            this.groupBox_Main.Controls.Add(this.label_IFTTTAPIKey);
+            this.groupBox_Main.Controls.Add(this.textBox_IFTTTKey);
+            this.groupBox_Main.Controls.Add(this.pictureBox_UseIFTTT);
+            this.groupBox_Main.Controls.Add(this.checkBox_UseIFTTT);
             this.groupBox_Main.Controls.Add(this.checkBox_IdleWhenNoInternetAccess);
             this.groupBox_Main.Controls.Add(this.pictureBox_WorkerName);
             this.groupBox_Main.Controls.Add(this.pictureBox_MinProfit);
@@ -735,10 +773,51 @@
             this.groupBox_Main.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox_Main.Name = "groupBox_Main";
             this.groupBox_Main.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox_Main.Size = new System.Drawing.Size(346, 180);
+            this.groupBox_Main.Size = new System.Drawing.Size(346, 214);
             this.groupBox_Main.TabIndex = 386;
             this.groupBox_Main.TabStop = false;
             this.groupBox_Main.Text = "Main:";
+            // 
+            // label_IFTTTAPIKey
+            // 
+            this.label_IFTTTAPIKey.AutoSize = true;
+            this.label_IFTTTAPIKey.Location = new System.Drawing.Point(113, 170);
+            this.label_IFTTTAPIKey.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_IFTTTAPIKey.Name = "label_IFTTTAPIKey";
+            this.label_IFTTTAPIKey.Size = new System.Drawing.Size(81, 13);
+            this.label_IFTTTAPIKey.TabIndex = 369;
+            this.label_IFTTTAPIKey.Text = "IFTTT API Key:";
+            // 
+            // textBox_IFTTTKey
+            // 
+            this.textBox_IFTTTKey.Enabled = false;
+            this.textBox_IFTTTKey.Location = new System.Drawing.Point(110, 187);
+            this.textBox_IFTTTKey.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textBox_IFTTTKey.Name = "textBox_IFTTTKey";
+            this.textBox_IFTTTKey.Size = new System.Drawing.Size(210, 20);
+            this.textBox_IFTTTKey.TabIndex = 368;
+            // 
+            // pictureBox_UseIFTTT
+            // 
+            this.pictureBox_UseIFTTT.Image = global::NiceHashMiner.Properties.Resources.info_black_18;
+            this.pictureBox_UseIFTTT.Location = new System.Drawing.Point(88, 184);
+            this.pictureBox_UseIFTTT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox_UseIFTTT.Name = "pictureBox_UseIFTTT";
+            this.pictureBox_UseIFTTT.Size = new System.Drawing.Size(18, 18);
+            this.pictureBox_UseIFTTT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_UseIFTTT.TabIndex = 367;
+            this.pictureBox_UseIFTTT.TabStop = false;
+            // 
+            // checkBox_UseIFTTT
+            // 
+            this.checkBox_UseIFTTT.AutoSize = true;
+            this.checkBox_UseIFTTT.Location = new System.Drawing.Point(10, 188);
+            this.checkBox_UseIFTTT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.checkBox_UseIFTTT.Name = "checkBox_UseIFTTT";
+            this.checkBox_UseIFTTT.Size = new System.Drawing.Size(78, 17);
+            this.checkBox_UseIFTTT.TabIndex = 366;
+            this.checkBox_UseIFTTT.Text = "Use IFTTT";
+            this.checkBox_UseIFTTT.UseVisualStyleBackColor = true;
             // 
             // checkBox_IdleWhenNoInternetAccess
             // 
@@ -898,7 +977,7 @@
             this.groupBox_Localization.Controls.Add(this.comboBox_Language);
             this.groupBox_Localization.Controls.Add(this.currencyConverterCombobox);
             this.groupBox_Localization.Controls.Add(this.label_displayCurrency);
-            this.groupBox_Localization.Location = new System.Drawing.Point(6, 192);
+            this.groupBox_Localization.Location = new System.Drawing.Point(6, 226);
             this.groupBox_Localization.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox_Localization.Name = "groupBox_Localization";
             this.groupBox_Localization.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1023,7 +1102,7 @@
             this.tabPageAdvanced.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPageAdvanced.Name = "tabPageAdvanced";
             this.tabPageAdvanced.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPageAdvanced.Size = new System.Drawing.Size(604, 370);
+            this.tabPageAdvanced.Size = new System.Drawing.Size(604, 392);
             this.tabPageAdvanced.TabIndex = 2;
             this.tabPageAdvanced.Text = "Advanced";
             this.tabPageAdvanced.UseVisualStyleBackColor = true;
@@ -1467,7 +1546,7 @@
             this.tabPageDevicesAlgos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPageDevicesAlgos.Name = "tabPageDevicesAlgos";
             this.tabPageDevicesAlgos.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPageDevicesAlgos.Size = new System.Drawing.Size(604, 370);
+            this.tabPageDevicesAlgos.Size = new System.Drawing.Size(604, 392);
             this.tabPageDevicesAlgos.TabIndex = 1;
             this.tabPageDevicesAlgos.Text = "Devices/Algorithms";
             this.tabPageDevicesAlgos.UseVisualStyleBackColor = true;
@@ -1541,10 +1620,10 @@
             // buttonSaveClose
             // 
             this.buttonSaveClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSaveClose.Location = new System.Drawing.Point(370, 413);
+            this.buttonSaveClose.Location = new System.Drawing.Point(348, 435);
             this.buttonSaveClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSaveClose.Name = "buttonSaveClose";
-            this.buttonSaveClose.Size = new System.Drawing.Size(110, 23);
+            this.buttonSaveClose.Size = new System.Drawing.Size(134, 23);
             this.buttonSaveClose.TabIndex = 44;
             this.buttonSaveClose.Text = "&Save and Close";
             this.buttonSaveClose.UseVisualStyleBackColor = true;
@@ -1553,7 +1632,7 @@
             // buttonDefaults
             // 
             this.buttonDefaults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDefaults.Location = new System.Drawing.Point(290, 413);
+            this.buttonDefaults.Location = new System.Drawing.Point(270, 435);
             this.buttonDefaults.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonDefaults.Name = "buttonDefaults";
             this.buttonDefaults.Size = new System.Drawing.Size(74, 23);
@@ -1565,7 +1644,7 @@
             // buttonCloseNoSave
             // 
             this.buttonCloseNoSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCloseNoSave.Location = new System.Drawing.Point(486, 413);
+            this.buttonCloseNoSave.Location = new System.Drawing.Point(486, 435);
             this.buttonCloseNoSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCloseNoSave.Name = "buttonCloseNoSave";
             this.buttonCloseNoSave.Size = new System.Drawing.Size(134, 23);
@@ -1578,7 +1657,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 448);
+            this.ClientSize = new System.Drawing.Size(634, 471);
             this.Controls.Add(this.buttonDefaults);
             this.Controls.Add(this.buttonSaveClose);
             this.Controls.Add(this.tabControlGeneral);
@@ -1594,6 +1673,7 @@
             this.tabPageGeneral.ResumeLayout(false);
             this.groupBox_Misc.ResumeLayout(false);
             this.groupBox_Misc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ShowInternetConnectionWarning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MinimizeMiningWindows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_RunAtStartup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_AllowMultipleInstances)).EndInit();
@@ -1617,6 +1697,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_LogToFile)).EndInit();
             this.groupBox_Main.ResumeLayout(false);
             this.groupBox_Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_UseIFTTT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_WorkerName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_MinProfit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ServiceLocation)).EndInit();
@@ -1766,5 +1847,11 @@
         private System.Windows.Forms.PictureBox pictureBox_RunAtStartup;
         private System.Windows.Forms.CheckBox checkBox_MinimizeMiningWindows;
         private System.Windows.Forms.PictureBox pictureBox_MinimizeMiningWindows;
+        private System.Windows.Forms.CheckBox checkBox_UseIFTTT;
+        private System.Windows.Forms.PictureBox pictureBox_UseIFTTT;
+        private System.Windows.Forms.Label label_IFTTTAPIKey;
+        private System.Windows.Forms.TextBox textBox_IFTTTKey;
+        private System.Windows.Forms.PictureBox pictureBox_ShowInternetConnectionWarning;
+        private System.Windows.Forms.CheckBox checkBox_ShowInternetConnectionWarning;
     }
 }
